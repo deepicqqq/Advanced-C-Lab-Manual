@@ -12,7 +12,38 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
-//type your code here
+#include <stdio.h>
+
+// Function to return the greatest of four numbers
+int max_of_four(int a, int b, int c, int d) {
+    int max = a;
+
+    if (b > max)
+        max = b;
+    if (c > max)
+        max = c;
+    if (d > max)
+        max = d;
+
+    return max;
+}
+
+int main() {
+    int n1, n2, n3, n4, greater;
+
+    // Taking input from the user
+    printf("Enter four integers: ");
+    scanf("%d %d %d %d", &n1, &n2, &n3, &n4);
+
+    // Function call
+    greater = max_of_four(n1, n2, n3, n4);
+
+    // Displaying the result
+    printf("The greatest number is: %d\n", greater);
+
+    return 0;
+}
+
 
 Output:
 //paste your output here
